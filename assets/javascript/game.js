@@ -11,11 +11,8 @@ const teamtwonumshots = document.querySelector("#teamtwo-numshots");
 const teamtwoshootbutton = document.querySelector("#teamtwo-shoot-button");
 const teamonenumgoals = document.querySelector("#teamone-numgoals");
 const teamtwonumgoals = document.querySelector("#teamtwo-numgoals");
-const numresets = document.querySelector("#num-resets");
+const numresets = document.querySelector("#numresets");
 const resetbutton = document.querySelector("#reset-button");
-
-
-
 
 
 
@@ -28,6 +25,7 @@ teamoneshootbutton.addEventListener("click", function () {
         let newCounterValue = Number(teamonenumgoals.innerHTML) + 1;
         teamonenumgoals.innerHTML = newCounterValue;
         console.log("goal");
+
 
     }
 
@@ -47,8 +45,12 @@ teamtwoshootbutton.addEventListener("click", function () {
 
 })
 
+
 resetbutton.addEventListener("click", function () {
     console.log("resets")
-    let newCounterValue = Number(numresets.innerHTML) +1;
-    numresets.innerHTML = newCounterValue;
+    teamonenumshots.innerHTML = 0;
+    teamtwonumshots.innerHTML = 0;
+    teamonenumgoals.innerHTML = 0;
+    teamtwonumgoals.innerHTML = 0;
+
 })
